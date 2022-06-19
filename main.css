@@ -1,0 +1,364 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+}
+
+header {
+    margin: 40px 60px 40px 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons {
+  padding-top: 5px;
+    width: 120px;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input {
+    width: 885px;
+    height: 35px;
+    display: flex;
+}
+
+.input__text {
+    width: 100%;
+    height: 100%;
+}
+
+.input__lypa {
+    justify-content: flex-end;
+}
+
+.input__text {
+    border: solid grey;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 0 10px 0 10px;
+}
+
+.menu {
+  height: 20px;
+  width: 1120px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 45px auto;
+  font-family: Arial Bold, sans-serif;
+}
+
+.menu a, h4 {
+  text-decoration: none;
+  color: black;
+}
+
+.menu h4:hover {
+  color: #FF9900;
+}
+
+.content {
+  height: 535px;
+}
+
+.content2 {
+  height: 250px;
+}
+
+.content, .content2, .content3, .comments {
+  width: 1800px;
+  margin: 30px auto 30px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content__big-ad {
+  width: 1190px;
+  height: 535px;
+  background-image: url(img/big_ad.svg);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content__big-ad h1 {
+  white-space: pre;
+}
+
+.content__big-ad__up {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-top: 15px;
+}
+
+.content__big-ad__button {
+  padding-left: 30px;
+  padding-bottom: 30px;
+}
+
+.content__small-ad {
+  background-image: url(img/small-ad.svg);
+  width: 580px;
+  height: 535px;
+  display: flex;
+  justify-content: space-between;
+  padding: 420px 30px 30px 30px;
+  text-align: bottom;
+}
+
+.content__small-ad h1 {
+  white-space: pre;
+}
+
+.content__small-ad img {
+  padding-top: 20px;
+}
+
+.content__email {
+  width: 580px;
+  height: 250px;
+  background-color: #DBDBDB;
+  border-radius: 5px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content__email-form {
+  width: 415px;
+  height: 35px;
+  border: 0;
+  padding: 0 10px 0 10px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+h1{
+  font-family: Arial Black, sans-serif;
+  color: white;
+}
+
+h2 {
+  font-family: Arial Bold, sans-serif;
+  font-size: 32px;
+  color: black;
+}
+
+h3 {
+  font-family: Arial Bold, sans-serif;
+  font-size: 28px;
+}
+
+.content__email__text p{
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+.content__email__form {
+  display: flex;
+}
+
+.content__vk {
+  background-image: url(img/vk.svg);
+  height: 250px;
+  width: 1190px;
+  border: none;
+  border-radius: 5px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content__vk h3 {
+  white-space: pre;
+  color: white;
+}
+
+.comments {
+  justify-content: center;
+}
+
+.content3 {
+  height: 360px;
+  margin-bottom: 60px;
+}
+
+.content3 img {
+  height: 270px;
+  width: 270px;
+}
+
+.content3__first, .content3__second, .content3__third {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content3__first__text, .content3__second__text, .content3__third__text {
+  width: 265px;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content3__first__img, .content3__second__img, .content3__third__img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 360px;
+}
+
+h5 {
+  font: Arial Bold, sans-serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.content3 p {
+  font: Arial Regular, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+footer {
+  margin-top: 70px;
+  height: 240px;
+  width: 100%;
+  background: #DBDBDB;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-evenly;
+  height: 240px;
+}
+
+.footer__content:first-child {
+  align-items: center;
+}
+
+.footer__catalogue, .footer__info, .footer__email, .footer__contacts {
+  display: flex;
+}
+
+.footer__catalogue__list1, .footer__catalogue__list2, .footer__info__list {
+  width: 100px;
+}
+
+.footer__catalogue__headline {
+  padding-top: 40px;
+  
+}
+
+.footer__info__headline {
+  padding-top: 40px;
+  width: 150px;
+}
+
+.footer__email {
+  width: 200px;
+}
+
+.footer__contacts {
+  width: 150px;
+}
+
+.footer__catalogue {
+  width: 430px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__info {
+  width: 270px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__content:last-child p{
+  font: Arial Regular, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.footer__content:last-child a{
+  text-decoration: none;
+  color: black;
+  margin-bottom: 100px;
+}
+
+.a1 {
+  margin-bottom: 5px;
+}
